@@ -1,0 +1,24 @@
+# systemd USER service for the smart glasses. Installed by install_service.sh
+# (a user service, not a system one, because Bluetooth earphone audio lives in the user's
+#  PipeWire session; "linger" makes it start at boot without anyone logging in).
+[Unit]
+Description=Smart glasses assistant (voice, vision, obstacle warning)
+After=pipewire.service pipewire-pulse.service wireplumber.service
+Wants=pipewire.service pipewire-pulse.service wireplumber.service
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+WorkingDirectory=@INSTALL_DIR@
+# GEMINI_API_KEY=... lives here (chmod 600), never in this file or in git
+EnvironmentFile=-%h/.config/smartglasses.env
+Environment=PYTHONUNBUFFERED=1
+ExecStart=@INSTALL_DIR@/.venv/bin/python -u assistant.py
+Restart=always
+RestartSec=3
+# the C270 webcam spams "Corrupt JPEG data"; don't let it flood the journal
+LogRateLimitIntervalSec=30s
+LogRateLimitBurst=100
+
+[Install]
+WantedBy=default.target

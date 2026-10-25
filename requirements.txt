@@ -1,0 +1,11 @@
+numpy
+sounddevice
+webrtcvad-wheels
+SpeechRecognition
+# pocketsphinx   # optional: only for fully offline STT (STT_ENGINE = "sphinx")
+piper-tts
+opencv-python-headless
+google-genai
+pydantic
+evdev; sys_platform == "linux"       # earphone button (on the Pi setup.sh installs it from apt)
+gpiozero; sys_platform == "linux"    # ultrasonic sensor (needs python3-lgpio from apt on the Pi 5)

@@ -1,0 +1,379 @@
+{
+  "camera": {
+    "1280x720": {
+      "backend": "opencv",
+      "fps": {
+        "n": 8,
+        "mean": 3.728,
+        "median": 3.731,
+        "std": 0.004,
+        "min": 3.72,
+        "max": 3.731
+      },
+      "brightness": {
+        "n": 8,
+        "mean": 135.841,
+        "median": 135.411,
+        "std": 1.275,
+        "min": 134.837,
+        "max": 139.141
+      },
+      "jpeg_kb_each_of_3": [
+        29,
+        29,
+        29
+      ],
+      "jpeg_encode_ms": 26.5
+    },
+    "640x480": {
+      "backend": "opencv",
+      "fps": {
+        "n": 8,
+        "mean": 7.662,
+        "median": 7.732,
+        "std": 0.126,
+        "min": 7.437,
+        "max": 7.756
+      },
+      "brightness": {
+        "n": 8,
+        "mean": 127.816,
+        "median": 127.702,
+        "std": 1.065,
+        "min": 126.198,
+        "max": 129.122
+      },
+      "jpeg_kb_each_of_3": [
+        15,
+        15,
+        15
+      ],
+      "jpeg_encode_ms": 2.6
+    },
+    "note": "Count 'Corrupt JPEG' / 'read error' lines separately by running without 2>/dev/null.",
+    "_when": "2026-10-19 18:20:40"
+  },
+  "ultrasonic": {
+    "warn_cm": 15.0,
+    "samples_per_distance": 40,
+    "rows": [
+      {
+        "true_cm": 5.0,
+        "mean_cm": 4.43,
+        "std_cm": 0.61,
+        "error_cm": -0.57,
+        "no_echo_or_far": 0,
+        "alert_rate": 1.0
+      },
+      {
+        "true_cm": 10.0,
+        "mean_cm": 8.63,
+        "std_cm": 0.34,
+        "error_cm": -1.37,
+        "no_echo_or_far": 0,
+        "alert_rate": 1.0
+      },
+      {
+        "true_cm": 12.0,
+        "mean_cm": 10.75,
+        "std_cm": 0.15,
+        "error_cm": -1.25,
+        "no_echo_or_far": 0,
+        "alert_rate": 1.0
+      },
+      {
+        "true_cm": 15.0,
+        "mean_cm": 71.49,
+        "std_cm": 30.7,
+        "error_cm": 56.49,
+        "no_echo_or_far": 0,
+        "alert_rate": 0.0
+      },
+      {
+        "true_cm": 18.0,
+        "mean_cm": 52.72,
+        "std_cm": 28.71,
+        "error_cm": 34.72,
+        "no_echo_or_far": 0,
+        "alert_rate": 0.0
+      },
+      {
+        "true_cm": 20.0,
+        "mean_cm": 30.96,
+        "std_cm": 9.45,
+        "error_cm": 10.96,
+        "no_echo_or_far": 0,
+        "alert_rate": 0.0
+      },
+      {
+        "true_cm": 30.0,
+        "mean_cm": 48.77,
+        "std_cm": 9.45,
+        "error_cm": 18.77,
+        "no_echo_or_far": 0,
+        "alert_rate": 0.0
+      },
+      {
+        "true_cm": 50.0,
+        "mean_cm": 89.75,
+        "std_cm": 0.42,
+        "error_cm": 39.75,
+        "no_echo_or_far": 0,
+        "alert_rate": 0.0
+      },
+      {
+        "true_cm": 100.0,
+        "mean_cm": 89.52,
+        "std_cm": 0.32,
+        "error_cm": -10.48,
+        "no_echo_or_far": 0,
+        "alert_rate": 0.0
+      }
+    ],
+    "confusion": {
+      "TP": 114,
+      "FP": 0,
+      "TN": 228,
+      "FN": 0
+    },
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "_when": "2026-10-19 18:21:30"
+  },
+  "gemini": {
+    "runs": 10,
+    "errors": 0,
+    "first_sentence_s": {
+      "n": 10,
+      "mean": 3.548,
+      "median": 3.265,
+      "std": 1.011,
+      "min": 2.614,
+      "max": 6.137
+    },
+    "total_s": {
+      "n": 10,
+      "mean": 3.608,
+      "median": 3.293,
+      "std": 0.969,
+      "min": 2.662,
+      "max": 6.138
+    },
+    "upload_kb": {
+      "n": 10,
+      "mean": 82.1,
+      "median": 82.0,
+      "std": 0.831,
+      "min": 81,
+      "max": 84
+    },
+    "models_used": [
+      "gemini-3.1-flash-lite",
+      "gemini-3.5-flash"
+    ],
+    "queries": [
+      "What's in front of me?",
+      "Describe what is in front of me in detail.",
+      "Read this.",
+      "Is there anything dangerous ahead?",
+      "What colour is the object in front of me?"
+    ],
+    "_when": "2026-10-20 06:51:45"
+  },
+  "stt": {
+    "engine": "SpeechRecognition (Google web)",
+    "runs": 10,
+    "nothing_recorded": 0,
+    "stt_delay_s": {
+      "n": 10,
+      "mean": 0.512,
+      "median": 0.521,
+      "std": 0.088,
+      "min": 0.369,
+      "max": 0.658
+    },
+    "wer": {
+      "n": 10,
+      "mean": 0.423,
+      "median": 0.333,
+      "std": 0.248,
+      "min": 0.2,
+      "max": 1.0
+    },
+    "recording_s": {
+      "n": 10,
+      "mean": 1.359,
+      "median": 1.32,
+      "std": 0.287,
+      "min": 1.02,
+      "max": 1.89
+    },
+    "rows": [
+      {
+        "ref": "what is in front of me",
+        "hyp": "in front of me",
+        "wer": 0.333,
+        "stt_s": 0.62
+      },
+      {
+        "ref": "read this label",
+        "hyp": "read this",
+        "wer": 0.333,
+        "stt_s": 0.44
+      },
+      {
+        "ref": "find my keys",
+        "hyp": "find my",
+        "wer": 0.333,
+        "stt_s": 0.55
+      },
+      {
+        "ref": "what time is it",
+        "hyp": "what time is",
+        "wer": 0.25,
+        "stt_s": 0.37
+      },
+      {
+        "ref": "is there anything dangerous ahead",
+        "hyp": "Carrom pool dangerous",
+        "wer": 0.8,
+        "stt_s": 0.66
+      },
+      {
+        "ref": "where is my phone",
+        "hyp": "where is my",
+        "wer": 0.25,
+        "stt_s": 0.49
+      },
+      {
+        "ref": "what colour is this",
+        "hyp": "",
+        "wer": 1.0,
+        "stt_s": 0.39
+      },
+      {
+        "ref": "describe the room",
+        "hyp": "describe the",
+        "wer": 0.333,
+        "stt_s": 0.52
+      },
+      {
+        "ref": "how many people are here",
+        "hyp": "how many people are",
+        "wer": 0.2,
+        "stt_s": 0.57
+      },
+      {
+        "ref": "what does the sign say",
+        "hyp": "what does the",
+        "wer": 0.4,
+        "stt_s": 0.52
+      }
+    ],
+    "_when": "2026-10-20 06:57:56"
+  },
+  "tts": {
+    "short (3 words)": {
+      "synth_s": {
+        "n": 5,
+        "mean": 0.109,
+        "median": 0.109,
+        "std": 0.007,
+        "min": 0.101,
+        "max": 0.118
+      },
+      "audio_s": 0.95,
+      "real_time_factor": 0.114
+    },
+    "medium (12 words)": {
+      "synth_s": {
+        "n": 5,
+        "mean": 0.398,
+        "median": 0.398,
+        "std": 0.015,
+        "min": 0.376,
+        "max": 0.423
+      },
+      "audio_s": 3.55,
+      "real_time_factor": 0.112
+    },
+    "long (30 words)": {
+      "synth_s": {
+        "n": 5,
+        "mean": 0.956,
+        "median": 0.955,
+        "std": 0.042,
+        "min": 0.892,
+        "max": 1.013
+      },
+      "audio_s": 8.45,
+      "real_time_factor": 0.113
+    },
+    "_when": "2026-10-20 06:58:15"
+  },
+  "system": {
+    "seconds": 120,
+    "cpu_percent_all_cores": {
+      "n": 60,
+      "mean": 3.202,
+      "median": 1.212,
+      "std": 6.169,
+      "min": 0.387,
+      "max": 39.241
+    },
+    "ram_used_mb": {
+      "n": 60,
+      "mean": 912.959,
+      "median": 920.703,
+      "std": 33.375,
+      "min": 837.406,
+      "max": 1003.672
+    },
+    "ram_total_mb": 8062,
+    "cpu_temp_c": {
+      "n": 60,
+      "mean": 69.455,
+      "median": 69.4,
+      "std": 1.464,
+      "min": 68.3,
+      "max": 76.0
+    },
+    "get_throttled": "throttled=0xe0000",
+    "get_throttled_help": "0x0 = never throttled/undervolted. Bit 0 (0x1) = undervoltage now, bit 16 (0x10000) = undervoltage has occurred since boot.",
+    "assistant_rss_mb": {
+      "n": 60,
+      "mean": 498.977,
+      "median": 512.047,
+      "std": 30.274,
+      "min": 415.266,
+      "max": 512.469
+    },
+    "_when": "2026-10-20 07:01:56"
+  },
+  "manual": {
+    "pi_idle_watts": null,
+    "pi_assistant_idle_watts": null,
+    "pi_peak_watts": null,
+    "pi_voltage_under_load_v": null,
+    "battery_runtime_hours": null,
+    "undervoltage_warnings_seen": "no",
+    "boot_to_ready_s": 7.0,
+    "bt_connect_s": 6.0,
+    "hazard_trials_total": null,
+    "hazard_trials_warned_in_time": null,
+    "find_trials_total": null,
+    "find_trials_reached": null,
+    "find_mean_time_s": null,
+    "scene_trials_total": null,
+    "scene_trials_correct": null,
+    "read_trials_total": null,
+    "read_trials_correct": null,
+    "low_light_trials_total": null,
+    "low_light_ultrasonic_warned": null,
+    "low_light_camera_answer_ok": null,
+    "notes": null,
+    "_when": "2026-10-20 07:04:45"
+  }
+}
